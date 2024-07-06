@@ -188,4 +188,16 @@ display(spark.read.csv("dbfs:/FileStore/tables/countriesout_region/REGION_ID=30"
 
 # COMMAND ----------
 
+display(df_countries)
+
+# COMMAND ----------
+
+df_countries.write.parquet("dbfs:/FileStore/tables/parquet_files")
+
+# COMMAND ----------
+
+display(spark.read.parquet("dbfs:/FileStore/tables/parquet_files"))
+
+# COMMAND ----------
+
 
